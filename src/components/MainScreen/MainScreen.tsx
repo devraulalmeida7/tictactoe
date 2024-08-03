@@ -1,6 +1,6 @@
-import style from './style.module.css'
+import styles from './style.module.css'
 import image from '../../assets/title.svg'
-import React from 'react'
+import React, { useId, useState } from 'react'
 
 
 // interface ButtonProps {
@@ -9,14 +9,18 @@ import React from 'react'
 // }  
 export default function MainScreen() {
 
-    const inputTypeCode = document.getElementById('inputTypeCode');
-    if(inputTypeCode) {
+    const buttonJoin = document.getElementById('buttonJoinGame')
 
-    }
-    interface count{
-        inputTypeCodeValue: string
-    }
+    const [inputValue, setInputValue] = useState('')
 
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setInputValue(event.target.value)
+    }
+    let charInput = setInputValue.toString();
+
+    if(charInput.length >=6) {
+        
+    }
 
     return (
         <> 
@@ -27,7 +31,7 @@ export default function MainScreen() {
 
               <h2>Enjoy with your friends</h2>
 
-              <button id='buttonCreateGame' className={`${style.buttonCreateGame}`}>Create a Game</button>
+              <button id='buttonCreateGame' className={`${styles.buttonCreateGame}`}>Create a Game</button>
 
               <hr></hr>
 
@@ -35,8 +39,16 @@ export default function MainScreen() {
 
               <hr></hr>
 
+              <button id= {styles.buttonJoinGame} style={{}} className={`${styles.buttonCreateGame }`}>Join game</button>
 
-              <input id='inputTypeCode' className={style.inputTypeCode} type="text" placeholder='  Type the invite code ' />
+
+              <input 
+              id='inputTypeCode' 
+              className={styles.inputTypeCode} 
+              type="text" 
+              placeholder='  Type the invite code ' 
+              value={inputValue} 
+              onChange={handleInputChange} />
 
             
 

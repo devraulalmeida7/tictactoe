@@ -1,5 +1,8 @@
 /*MainScreen Style Module */
 
+
+/* Button CSS*/
+
 .buttonCreateGame {
     background: #62953A;
     color: #fff;
@@ -10,7 +13,23 @@
     border: 0;
     box-shadow: 0 0 5px 3px #0005;
     font-family: inherit;
+    transition: 0.5s;
 }
+.buttonCreateGame:hover {
+    background: #528928;
+}
+
+#buttonJoinGame {
+    background-color: #3A6995;
+    margin-bottom: 20px;
+    display:none;
+}
+#buttonJoinGame:hover{
+    background-color: #1a568f;
+}
+
+
+/* Input CSS*/
 .inputTypeCode{
     background: #d9d9d9;
     border-radius: 15px;
