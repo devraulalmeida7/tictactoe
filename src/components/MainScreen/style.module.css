@@ -22,10 +22,14 @@
 #buttonJoinGame {
     background-color: #3A6995;
     margin-bottom: 20px;
-    display:none;
+    /* display:none; */
 }
 #buttonJoinGame:hover{
     background-color: #1a568f;
+}
+
+.buttonJoinActive #buttonJoinGame {
+    display: block;
 }
 
 
